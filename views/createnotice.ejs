@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+<%- include('partials/navbar'); -%>
+
+<form action="/createnotice" method="post">
+<label for="to">Recipents</label><br>
+  <textarea id="to" name="noticeTo" cols="80" required></textarea><br>
+<label for="title">Title</label><br>
+  <textarea id="title" name="noticeTitle" rows="3" cols="80" required></textarea><br>
+<label for="body">Title</label><br>
+  <textarea id="body" name="noticeBody" rows="30" cols="90" required></textarea><br>
+<input type="submit" value="Publish">
+
+</form>

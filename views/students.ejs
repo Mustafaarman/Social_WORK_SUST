@@ -1,0 +1,17 @@
+<%- include('partials/header'); -%>
+<%- include('partials/navbar'); -%>
+
+	
+	<ul>
+		<% var allbatch = []; %>
+		<% for (var i = 1; i <= 27; i++) { %>
+  		<% allbatch.push(i); %>
+		 <% } %>
+
+		 <% allbatch.forEach(function(num) { %>
+		 	<a href="/batch/<%= num %>"><li>SCW Undergraduate Batch <%= num %></li></a>
+		 <% }) %>
+	</ul>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<%- include('partials/header'); -%>
+<% found.forEach(function(foundn) { %>
+<h1>Headline: <%= foundn.title %></h1>
+<h2>Date: <%= foundn.date %></h2>
+<h4>To Whom: <%= foundn.to %></h4>
+<p>Details: <%= foundn.body %></p>
+<% }); %>
+</body>
+</html>

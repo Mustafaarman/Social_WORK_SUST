@@ -1,0 +1,17 @@
+<%- include('partials/header'); -%>
+<%- include('partials/navbar'); -%>
+<table border="1">
+	<% found.forEach(function(everyStudent) { %>
+		<tr><td>
+			<ul>
+				<li><%= everyStudent.name %></li>
+				<li><%= everyStudent.reg_no %></li>
+				<li><%= everyStudent.phone%></li>
+				<li><%= everyStudent.address %></li>
+			</ul>
+		</td></tr>
+
+<% }) %>
+</table>
+</body>
+</html>

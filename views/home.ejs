@@ -1,0 +1,31 @@
+<%- include('partials/header'); -%>
+<%- include('partials/navbar'); -%>
+
+
+<div class="row">
+<div class="column">
+<table border="1">
+<tr><td>Notice</td></tr>
+<tr><td>
+<ul> 
+<% foundNotice.forEach(function(notice) { %>
+	<li><%= notice.title %> <a href="/notice/<%= notice.title %>">view</a>
+	<ul><li><%= notice.date.getDate()%>-<%= notice.date.getMonth()%>-<%= notice.date.getFullYear()%></li></ul></li>
+<% }) %>
+</ul>
+</td></tr>
+</table>
+</div>
+<div class="column">
+<table border="1">
+<tr><td>Event</td></tr>
+<tr><td>
+<li>first Meeting</li>
+<li>Seconed Meeting</li>
+</ul>
+</td></tr>
+</table>
+</div>
+</div>
+</body>
+</html>

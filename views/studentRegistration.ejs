@@ -1,0 +1,54 @@
+<%- include('partials/header'); -%>
+
+<%- include('partials/navbar'); -%>
+
+<form action="/studentReg" method="post">
+	<label for="batch">Batch Number:</label><br>
+  <input type="number" id="batch" name="batch_number"><br>
+  <label for="name">Full name:</label><br>
+  <input type="text" id="name" name="full_name"><br>
+  <label for="reg">Registration Number:</label><br>
+  <input type="number" id="reg" name="registration_number"><br>
+  <label for="phone">Phone:</label><br>
+  <input type="number" id="phone" name="phone_number"><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="" name="email"><br>
+  <label for="address">Address:</label><br>
+  <input type="text" id="address" name="address"><br>
+  <label for="img">Image URL:</label><br>
+  <input type="text" id="img" name="img_url"><br>
+  <button type="button" id="button" onclick="myFunction()">Submit</button>
+</form>
+<p id="batch_error"></p>
+<script>
+function myFunction() {
+  let a = document.getElementById("batch").value;
+  let b = document.getElementById("reg").value;
+  let c = document.getElementById("phone").value;
+  let text;
+  if ( a > 0 && a < 50 ) {
+  	if ( b.length == 10 ) {
+  	  if ( c.length == 11 ) {
+  	  	document.getElementById("button").setAttribute("type", "submit");
+  		
+  		}
+  	  else{
+  	   text = "Your phone data is not valid. Try again.";
+       document.getElementById("batch_error").innerHTML = text;
+  	}
+    
+  }
+    else{
+  	  text = "Your reg data is not valid. Try again.";
+      document.getElementById("batch_error").innerHTML = text;
+  	}
+  }
+  else{
+  	text = "Your batch data is not valid. Try again.";
+    document.getElementById("batch_error").innerHTML = text;
+  }
+  
+}
+</script>
+</body>
+</html>
