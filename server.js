@@ -13,8 +13,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-mongoose.connect('mongodb+srv://admin-arman:admin1234@cluster0.xd4wu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
-
+mongoose.connect("");
 app.use(require("./routes/routerNotice"));
 
 
