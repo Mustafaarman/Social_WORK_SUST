@@ -115,8 +115,9 @@ app.get('/batch/:batchNum', function (req, res) {
   })
 })
 
+// write a function looping through array items
 
 
-app.listen(process.env.PORT, function() {
+app.listen(3000, function() {
 	console.log("server started at http://localhost:3000");
 })
